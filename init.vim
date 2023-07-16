@@ -33,18 +33,19 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'sakhnik/nvim-gdb'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
 "Plugin 'tpope/vim-commentary'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'vim-scripts/indentpython.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'aklt/plantuml-syntax'
+"Plugin 'davidhalter/jedi-vim'
 "Plugin 'kana/vim-textobj-user'
 "Plugin 'bps/vim-textobj-python'
 Plugin 'kien/ctrlp.vim'
 Plugin 'morhetz/gruvbox'
-Plugin 'vim-python/python-syntax'
-Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'vim-python/python-syntax'
+" Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'stsewd/isort.nvim'
 "Plugin 'fisadev/vim-isort'
 "Plugin 'editorconfig/editorconfig-vim'
@@ -56,10 +57,10 @@ Plugin 'andrewstuart/vim-kubernetes'
 "Plugin 'StanAngeloff/php.vim'
 "Plugin 'stephpy/vim-php-cs-fixer'
 "Plugin 'ncm2/ncm2'
-Plugin 'nvie/vim-flake8'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'deoplete-plugins/deoplete-jedi'
+" Plugin 'nvie/vim-flake8'
+" Plugin 'vim-syntastic/syntastic'
+"Plugin 'Shougo/deoplete.nvim'
+"Plugin 'deoplete-plugins/deoplete-jedi'
 "Plugin 'majutsushi/tagbar'
 Plugin 'elzr/vim-json'
 Plugin 'ervandew/supertab'
@@ -72,6 +73,7 @@ Plugin 'ervandew/supertab'
 "Plugin 'pacha/vem-tabline'
 Plugin 'pacha/vem-statusline'
 Plugin 'pedrohdz/vim-yaml-folds'
+Plugin 'python-mode/python-mode'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -89,7 +91,7 @@ filetype plugin indent on    " required
 
 " set shell
 
-set shell=/bin/zsh
+" set shell=/bin/zsh
 
 " nvim-gdb key mappings
 
@@ -444,3 +446,16 @@ let g:deoplete#enable_at_startup = 1
 " autocmd FileType python setlocal omnifunc=deoplete#complete
 
 let g:vim_isort_map = '<C-i>'
+
+let g:pymode_options_max_line_length = 140
+
+" let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pycodestyle', 'mccabe']
+
+"let g:pymode_lint_select = ["W0612"]
+let g:pymode_rope = 1
+let g:pymode_rope_prefix = '<C-c>'
+
+let ropevim_vim_completion = 1
+let ropevim_extended_complete = 1
+let ropevim_autoimport_modules = ["os.*", "podman.*"]
+let ropevim_autoimport_ask_modules = 1
