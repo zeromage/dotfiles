@@ -459,3 +459,5 @@ let ropevim_vim_completion = 1
 let ropevim_extended_complete = 1
 let ropevim_autoimport_modules = ["os.*", "podman.*"]
 let ropevim_autoimport_ask_modules = 1
+
+autocmd BufRead,BufNewFile Dockerfile.template set filetype=Dockerfile
